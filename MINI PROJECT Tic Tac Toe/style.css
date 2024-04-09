@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #10141e;
+  /* background-color: #fff; */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  padding: 1vw;
+  color: #d03dfd;
+}
+
+.turn-container {
+  width: 170px;
+  height: 80px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+}
+
+.turn-container h3 {
+  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: #f4f5f7;
+}
+
+.turn-container .turn-box {
+  border: 3px solid #a4b0d8;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.turn-container .turn-box:nth-child(even) {
+  border-right: none;
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85px;
+  height: 40px;
+  background-color: #a83e2f;
+  z-index: -1;
+}
+
+
+.container {
+  height: 70vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+#box1 {
+  background-color: #4b648a;
+}
+
+#box1:hover {
+  background-color: #9497a0;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: #51abec;
+  background-color: #dceafe;
+}
+
+.box:hover {
+  background-color: #9497a0;
+  cursor: pointer;
+}
+
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #a83e2f;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #9497a0;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+#msg {
+  color: #1086d5;
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
+}
+footer{
+  color: #1e9df3;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Media Queries for Phones (up to 320px wide) */
+/* @media screen and (max-width: 320px) {
+    .header{
+      font-size: 2.8vw;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    padding: 1vw;
+    color: #b297ba;
+    }
+  
+    .turn-container {
+      width: 120px;
+      height: 60px;
+    }
+} */
+@media screen and (orientation: portrait) {
+  .container-0 h1 {
+    font-size: 13vw;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    padding: 0.5vw;
+    color: #d03dfd;
+    margin-top: 12px;
+  }
+
+  .turn-container h3 {
+    margin: 0;
+    padding-top: 51px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #f4f5f7;
+    font-size: 5vw;
+    display: none;
+  }
+
+  .turn-container {
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+  }
+
+ .turn-container .turn-box {
+  border: 3px solid #a4b0d8;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: none;
+}
+
+.bg {
+  display: none;
+}
+
+  .container {
+    height: 58vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+  }
+
+  #reset-btn {
+    padding: 1.3rem;
+    padding-bottom: 21px;
+    font-size: 3rem;
+    background-color: #a83e2f;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+  }
+  .msg-container {
+    height: 174vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  #msg {
+    color: #1086d5;
+    font-size: 6vw;
+    font-weight: 700;
+  }
+
+  .msg-container #new-btn {
+    padding: 1rem;
+    font-size: 40px;
+    background-color: #8c92a1;
+    color: #fff;
+    /* border-radius: 1rem; */
+    border: none;
+  }
+}
